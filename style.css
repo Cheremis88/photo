@@ -1,0 +1,76 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  background-color: blueviolet;
+}
+
+.photo {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+img {
+  width: 100%;
+  animation-name: move;
+}
+
+.piece-1 {
+  --trans: -100vw;
+  animation-duration: 1.5s;
+}
+
+.piece-6 {
+  --trans: 100vw;
+  animation-duration: 1.6s;
+}
+
+.piece-5 {
+  --trans: 0 100vh;
+  --rotate: 360deg;
+  animation-duration: 1.7s;
+}
+
+.piece-8 {
+  --trans: 0 -100vh;
+  animation-duration: 1.8s;
+}
+
+.piece-3 {
+  --trans: -100vw 100vh;
+  animation-duration: 1.9s;
+}
+
+.piece-2 {
+  --trans: 100vw 100vh;
+  --rotate: 360deg;
+  animation-duration: 2s;
+}
+
+.piece-7 {
+  --trans: -100vw;
+  animation-duration: 2.1s;
+}
+
+.piece-9 {
+  --trans: 0 100vw;
+  animation-duration: 2.2s;
+}
+
+.piece-4 {
+  --trans: -100vw -200vh;
+  --rotate: 360deg;
+  animation-duration: 3s;
+}
+
+
+
+@keyframes move {
+  from {
+    translate: var(--trans);
+    rotate: var(--rotate);
+  }
+}
